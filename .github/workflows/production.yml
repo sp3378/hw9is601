@@ -82,7 +82,7 @@ jobs:
           RETRY_INTERVAL=5
           RETRIES=0
           while [ $RETRIES -lt $MAX_RETRIES ]; do
-            mkdir -p ~/.cache/trivy
+            mkdir -p ~/.cache/trivy 
             trivy image --download-db-only
             if [ $? -eq 0 ]; then
               echo "Trivy DB download succeeded"
