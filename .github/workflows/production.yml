@@ -95,6 +95,6 @@ jobs:
           done
 
       # Scan the Docker image after DB is downloaded
-      - name: Scan the Docker image with Trivy
+      - name: Scan the Docker image with Trivy 
         run: |
           trivy image saisrinivas194/homework9:latest --format table --exit-code 1 --ignore-unfixed --severity CRITICAL,HIGH
